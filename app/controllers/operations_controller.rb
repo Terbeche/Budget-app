@@ -1,10 +1,7 @@
 class OperationsController < ApplicationController
 
     def index
-        @user = User.find(params[:user_id])
-        
-        @operations = @user.operations
-
+        @operations = current_user.operations
     end
 
     def show
@@ -13,14 +10,27 @@ class OperationsController < ApplicationController
 
     def new
         @operation = Operation.new
+        respond_to do |format|
+            format.html { render :new, locals: { operation: @operation } }
+        end
     end
 
     def create
-        @operation = Operation.new(operation_params)
+        @operation =  current_user.operations.new(operation_params)
         if @operation.save
-            redirect_to @operation
+            redirect_to user_operation_path(@operation.user_id, @operation.id)
         else
             render 'new'
         end
     end
+
+
+    def operation_params
+        params
+        .require(:operation)
+        .permit(:name, :amount)
+        .merge(author: current_user)
+    end
+
+
 end
