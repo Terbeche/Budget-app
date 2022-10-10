@@ -12,6 +12,8 @@ RSpec.describe User, model: :User do
     end
 
     it 'name should not exceed 50 characters' do
+      subject.name = 'test' * 50
+      expect(subject).to_not be_valid
     end
 
     it 'email should be present and not blank' do

@@ -17,19 +17,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_132122) do
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "icon"
-    t.bigint "author_id_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id_id"], name: "index_groups_on_author_id_id"
+    t.index ["author_id"], name: "index_groups_on_author_id"
   end
 
   create_table "operations", force: :cascade do |t|
     t.string "name"
     t.decimal "amount"
-    t.bigint "author_id_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id_id"], name: "index_operations_on_author_id_id"
+    t.index ["author_id"], name: "index_operations_on_author_id"
   end
 
   create_table "operations_groups", id: false, force: :cascade do |t|
@@ -52,6 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_132122) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "groups", "users", column: "author_id_id"
-  add_foreign_key "operations", "users", column: "author_id_id"
+  add_foreign_key "groups", "users", column: "author_id"
+  add_foreign_key "operations", "users", column: "author_id"
 end

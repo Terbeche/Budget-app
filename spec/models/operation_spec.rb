@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe Operation, model: :Operation do
   describe 'Tests for Operation model validation' do
     @user = User.new(name: 'Test', email: 'termus96@gmail.com', password: '123456')
-
+    @user.save
     subject { Operation.new(author: @user, name: 'Test operation', amount: 30) }
     before { subject.save }
 
@@ -14,15 +14,17 @@ RSpec.describe Operation, model: :Operation do
     end
 
     it 'name should not exceed 50 characters' do
+      subject.name = 'test' * 50
+      expect(subject).to_not be_valid
     end
 
     it 'amount should be present and not blank' do
-      subject.email = nil
+      subject.amount = nil
       expect(subject).to_not be_valid
     end
 
     it 'amount should be a numerical value' do
-      subject.email = nil
+      subject.amount = 'five'
       expect(subject).to_not be_valid
     end
   end
