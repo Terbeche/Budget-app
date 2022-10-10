@@ -5,7 +5,6 @@ class OperationsController < ApplicationController
 
   def show
     @operation = Operation.find(params[:id])
-    @group = @operation.groups.find(params[:id])
   end
 
   def new
@@ -27,7 +26,7 @@ class OperationsController < ApplicationController
   def operation_params
     params
       .require(:operation)
-      .permit(:name, :amount, :groups)
+      .permit(:name, :amount, :group_id)
       .merge(author: current_user)
   end
 end
