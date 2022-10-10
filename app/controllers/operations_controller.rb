@@ -5,6 +5,7 @@ class OperationsController < ApplicationController
 
   def show
     @operation = Operation.find(params[:id])
+    @group = @operation.groups.find(params[:id])
   end
 
   def new
@@ -17,7 +18,7 @@ class OperationsController < ApplicationController
   def create
     @operation = current_user.operations.new(operation_params)
     if @operation.save
-      redirect_to user_operation_path(@operation.user_id, @operation.id)
+      redirect_to user_operation_path(@operation.author_id, @operation.id)
     else
       render 'new'
     end
@@ -26,7 +27,7 @@ class OperationsController < ApplicationController
   def operation_params
     params
       .require(:operation)
-      .permit(:name, :amount)
+      .permit(:name, :amount, :groups)
       .merge(author: current_user)
   end
 end

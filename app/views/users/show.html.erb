@@ -20,12 +20,14 @@
                 <td class="py-3 px-6 text-left whitespace-nowrap">
                   <div class="flex items-center">
                     <span class="text-gray-900 text-xl leading-tight font-medium px-6 py-6"><%= link_to  group.name, user_group_path(current_user, group), class: "mb-6"  %></span>
-
                   </div>
                 </td>
+
                 <td class="py-3 px-6 text-left">
-                  <div class="flex items-center">
-                    <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs"><%= group.icon%></span>
+                  <div class="flex items-center w-6">
+                    <% if group.icon.attached? %>
+                      <image src="<%= (url_for(group.icon)) %>">
+                    <% end %>
                   </div>
                 </td>
 
