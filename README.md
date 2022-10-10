@@ -1,24 +1,78 @@
-# README
+# Budget-App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+## Built With
 
-Things you may want to cover:
+- ![](https://img.shields.io/badge/Github-blueviolet)
+- ![](https://img.shields.io/badge/Ruby-red)
+- ![](https://img.shields.io/badge/Ruby*on*Rails-red)
+- ![](https://img.shields.io/badge/PostgreSql-blue)
 
-* Ruby version
 
-* System dependencies
+### Install & Setup
 
-* Configuration
+To setup and install this sample AlFa Blog project, follow the below steps:
+- Clone this project by the command: 
+  ```
+  git clone https://github.com/Terbeche/Budget-app.git
+  ```
 
-* Database creation
+- Then switch to the project folder by the bellow query:
 
-* Database initialization
+  ```
+  cd Budget-app
+  ```
 
-* How to run the test suite
+- Install the required dependecies with:
+  ```
+  bundle install
+  ```
+- Install npm dependencies with: 
+  ```
+  npm install
+  ```
+- Before running below commands update [config/database.yml](./config/database.yml) with your local `DB`credentials. Then run:
+    ```
+    rake db:create
+    ```
+    ```
+    rake db:migrate
+    ```
+- To make the tailwindcss works run the below command:
+    ```
+    bundle exec rake assets:precompile
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+- With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
+### Tests
 
-* Deployment instructions
+- Run `bundle install`
+- Run `bundle exec rspec spec`
 
-* ...
+### Prerequisites
+
+- IDE to edit and run the code (We use Visual Studio Code 🔥).
+- Git to versionning your work.
+- Postgresql
+
+## Author
+
+👤 **Terbeche Mostefa**
+
+- GitHub: [@githubhandle](https://github.com/Terbeche)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mustapha-terbeche/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Terbeche/Budget-app/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
