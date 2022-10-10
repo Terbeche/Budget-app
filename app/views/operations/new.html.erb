@@ -1,0 +1,24 @@
+<div class="mt-8">
+  <div class="min-w-screen flex pt-1 justify-center font-sans overflow-hidden">
+    <div class="block rounded-lg shadow-lg bg-white px-6 py-8 md:px-12 lg:w-1/2 h-full mb-5 ">
+      <h2 class="">Add New Operation</h2>
+      <%= form_with model: @operation, url: user_operations_path, method: :post,  local: true, scope: :operation,data: { turbo: false }  do |form| %>
+        <div class="relative ">
+          <%= form.label :name, class: "leading-7 text-sm text-gray-400" %>
+          <%= form.text_field :name, autofocus: true,class: "form-control block w-full px-3 py-1.5 mb-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" %>
+        </div>
+        <div class="relative ">
+          <%= form.label :amount, class: "leading-7 text-sm text-gray-400" %>
+          <%= form.number_field :amount, autofocus: true,class: "form-control block w-full px-3 py-1.5 mb-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" %>
+        </div>
+        <div class="actions flex justify-between">
+          <%= form.submit "Save", class: " px-6 py-2.5 mb-6 w-1/3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+          <%= link_to 'Back', url_for(:back), class: "text-center px-6 py-2.5 mb-6 w-1/3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% if flash[:notice] %>
+    <div class="alert-pos" id="notice"><%= flash[:notice] %></div>
+  <% end %>
+</div>
