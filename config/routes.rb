@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :users do
+    root :to => "home#index"
+  end
+  
   root to: "home#index"
 end

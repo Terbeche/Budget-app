@@ -3,7 +3,7 @@ RSpec.describe Group, model: :Group do
   describe 'Tests for Group model validation' do
     @user = User.create(name: 'Test', email: 'termus96@gmail.com', password: '123456')
 
-    subject { Group.new(author: @user, name: 'Test operation', icon: 'https://cdn-icons-png.flaticon.com/512/8031/8031650.png') }
+    subject { Group.new(author: @user, name: 'Test operation') }
     before { subject.save }
 
     it 'name should be present and not blank' do
@@ -14,7 +14,7 @@ RSpec.describe Group, model: :Group do
     end
 
     it 'name should not exceed 50 characters' do
-      subject.name = 'test'
+      subject.name = 'test' * 50
       expect(subject).to_not be_valid
     end
   end
