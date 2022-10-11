@@ -5,4 +5,6 @@ class Operation < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   validates :amount, presence: true, numericality: { greater_than: 0 }
   validates :author_id, presence: true
+  validates :groups, presence: true
+
 end
