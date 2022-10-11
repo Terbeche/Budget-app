@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   get 'users/operations'
   devise_for :users
   resources :users, only: [ :index, :show] do
-    resources :groups, only: [ :index, :show, :new, :create]
-    resources :operations, only: [ :index, :show, :new, :create]
+    resources :groups, only: [ :index, :show, :new, :create] do
+      resources :operations, only: [ :index, :show, :new, :create]
+    end
   end
 
-  root to: "users#index"
+  root to: "home#index"
 end

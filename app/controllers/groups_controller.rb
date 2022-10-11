@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   def index
     @groups = current_user.groups
 
-    
   end
 
   def show
@@ -19,7 +18,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
-      redirect_to user_group_path(@group.author_id, @group.id)
+      redirect_to root_path
     else
       render 'new'
     end
