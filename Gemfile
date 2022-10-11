@@ -67,4 +67,5 @@ group :development do
   # gem "spring"
 end
 
+gem 'cancancan'
 gem 'tailwindcss-rails', '~> 2.0'

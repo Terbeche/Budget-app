@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
-    def index
-        @groups = current_user.groups
-    end
-  
-
+  def index
+    @groups = current_user.groups
   end
-  
+end

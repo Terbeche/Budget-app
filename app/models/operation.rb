@@ -6,5 +6,4 @@ class Operation < ApplicationRecord
   validates :amount, presence: true, numericality: { greater_than: 0 }
   validates :author_id, presence: true
   validates :groups, presence: true
-
 end
