@@ -4,7 +4,13 @@
 <div class="overflow-x-auto">
   <div class="min-w-screen min-h-screen bg-gray-100 flex justify-center bg-gray-100 font-sans overflow-hidden">
     <div class="w-full lg:w-5/6 py-6 px-6">
-    <div class="total-amount px-6 py-6">
+    <div class="total-amount flex justify-center items-center	px-6 py-6">
+    <span>
+      <% if @group.icon.attached? %>
+      <image src="<%= (url_for(@group.icon)) %>" class="category-icon" >
+      <% end %>
+    </span>
+
     <span>Total amount of transactions</span>
     <span class="amount">
       <% @operations = @group.operations %>
@@ -16,7 +22,7 @@
     </span>
   </div>
         <div class="categories">
-            <% @group.operations.each do |operation| %>
+            <% @group.operations.order("created_at DESC").each do |operation| %>
                 <div class="category">
                       <span class="category-name"><%= link_to  operation.name, user_group_operation_path(current_user, @group.id, operation) %></span>
                       <span class="category-amount">$<%= operation.amount%></span>
