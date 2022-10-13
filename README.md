@@ -11,6 +11,7 @@
 - ![](https://img.shields.io/badge/Ruby-red)
 - ![](https://img.shields.io/badge/Ruby*on*Rails-red)
 - ![](https://img.shields.io/badge/PostgreSql-blue)
+- ![](https://img.shields.io/badge/Tailwind-blue)
 
 
 ### Install & Setup
