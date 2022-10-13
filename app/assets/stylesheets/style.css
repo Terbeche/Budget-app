@@ -165,3 +165,41 @@ ul {
   padding-top: 2rem;
   font-size: 1.5rem;
 }
+
+.login-splash {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  height: 4rem;
+  background-color: #377bc2;
+  color: white;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.signup-splash {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  height: 4rem;
+  background-color: white;
+  color: #434b54;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.app-name-splash {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  color: #377bc2;
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
