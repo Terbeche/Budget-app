@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
-      redirect_to root_path
+      redirect_to home_path
     else
       render 'new'
     end

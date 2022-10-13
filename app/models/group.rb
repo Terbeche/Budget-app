@@ -4,5 +4,4 @@ class Group < ApplicationRecord
   has_one_attached :icon
   validates :name, presence: true, length: { maximum: 50 }
   validates :author_id, presence: true
-  validates :icon, presence: true
 end

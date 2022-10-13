@@ -69,4 +69,5 @@ end
 
 gem 'cancancan'
 
+gem 'capybara'
 gem 'tailwindcss-rails', '~> 2.0'

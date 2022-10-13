@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_192609) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.string "icon"
+    t.string "icon", default: "https://cdn-icons-png.flaticon.com/512/8680/8680342.png"
     t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
