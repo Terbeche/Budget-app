@@ -5,15 +5,19 @@
       <%= form_with model: @group, url: user_groups_path, method: :post,  local: true, scope: :group,data: { turbo: false }  do |form| %>
         <div class="relative ">
           <%= form.label :name, class: "leading-7 text-sm text-gray-400" %>
-          <%= form.text_field :name, autofocus: true,class: "form-control block w-full px-3 py-1.5 mb-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" %>
+          <%= form.text_field :name, autofocus: true,class: "form-control block w-full px-3 py-1.5 mb-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none" %>
         </div>
         <div class="relative ">
           <%= form.label :icon, class: "leading-7 text-sm text-gray-400" %>
-          <%= form.file_field :icon, autofocus: true,class: "form-control block w-full px-3 py-1.5 mb-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" %>
+          <%= form.file_field :icon, autofocus: true,class: "form-control block w-full px-3 py-1.5 mb-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none" %>
         </div>
         <div class="actions flex justify-between">
-          <%= form.submit "Save", class: " px-6 py-2.5 mb-6 w-1/3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
-          <%= link_to 'Back', url_for(:back), class: "text-center px-6 py-2.5 mb-6 w-1/3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+        <div>
+          <%= form.submit "Save", class: "back-button w-full px-6 py-2.5 mb-6 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out" %>
+        </div>
+        <div>
+          <%= link_to 'Back', url_for(:back), class: "back-button w-full text-center px-6 py-2.5 mb-6 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out" %>
+        </div>
         </div>
       <% end %>
     </div>

@@ -68,4 +68,5 @@ group :development do
 end
 
 gem 'cancancan'
+
 gem 'tailwindcss-rails', '~> 2.0'

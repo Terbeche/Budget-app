@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'style.css' %>
     <%= javascript_importmap_tags %>
   </head>
   <body class=" bg-gray-100">
@@ -15,20 +17,13 @@
     <%= render partial: "shared/navbar" %>
   <%end%>
   <main >
-    <div class="overflow-x-auto">
-      <div class="min-w-screen min-h-screen  flex justify-center font-sans overflow-hidden">
-        <div class="w-full ">
-          <div class="ml-5 container w-full flex text-right mt-3 absolute z-50 lg:w-1/3">
-          <% if notice %> <p class="alert alert-success"><%= notice %></p> 
-          <% end %>
-           <% if alert %>
-          <p class="alert alert-danger"><%= alert %></p> 
-          <% end %>
-          </div>
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p> 
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p> 
+    <% end %>
+    <%= yield %>
   </main>
 </body>
 </html>

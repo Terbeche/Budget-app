@@ -1,0 +1,126 @@
+body {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  background-color: #ddd;
+  color: #434b54;
+}
+
+a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+ul {
+  list-style: none;
+}
+
+.app-icon {
+  color: #377bc2;
+}
+
+.navbar {
+  background-color: white;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 5rem;
+}
+
+.category {
+  display: flex;
+  gap: 2rem;
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.category-icon {
+  width: 4rem;
+}
+
+.category-name {
+  width: 12rem;
+  flex-grow: 5;
+}
+
+.category-amount {
+  flex-grow: 1;
+  color: black;
+}
+
+.create-category-button {
+  height: 2rem;
+  background-color: #5fb523;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.create-transaction-button {
+  height: 2rem;
+  background-color: #5fb523;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.back-button {
+  display: block;
+  height: 2rem;
+  background-color: #5fb523;
+  color: white;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.log-out-button {
+  height: 2rem;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.total-amount {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.devise-button {
+  height: 2rem;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.page-title {
+  color: white;
+  background-color: #377bc2;
+  height: 5rem;
+  align-self: center;
+  justify-self: center;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
