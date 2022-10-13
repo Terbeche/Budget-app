@@ -105,6 +105,18 @@ ul {
   text-align: center;
   padding-top: 1rem;
 }
+.app-name{
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  height: 2rem;
+  color: #377bc2;
+  background-color: white;
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
 
 .log-out-button {
   font-family: 'Figtree', sans-serif;
