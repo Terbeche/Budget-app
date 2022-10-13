@@ -1,0 +1,33 @@
+<div class="text-white text-center font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+<h1 class="text-white page-title">Categories</h1>
+</div>
+<div class="px-6 py-6">
+ <div class="categories">
+   <% @groups.each do |group| %>
+    <div class="category">
+      <div class="category-icon">
+        <% if group.icon.attached? %>
+          <image src="<%= (url_for(group.icon)) %>" class="icon" >
+        <% end %>
+      </div>
+      <div class="category-name">
+        <span><%= link_to  group.name, user_group_path(current_user, group) %></span>
+
+      </div>
+
+      <div class="category-amount">
+        <% @operations = group.operations %>
+        <% @amount = 0 %>
+        <% @operations.each do |operation| %>
+          <% @amount += operation.amount %>
+        <% end %>
+        $<%= @amount %>                
+      </div>
+    </div>
+    <%end%>
+    <div>
+      <%= link_to  "Create new Category", new_user_group_path(current_user) , class:"create-category-button text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %> 
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&display=swap');
+
+body {
+  font-size: 16px;
+  font-family: 'Figtree', sans-serif;
+  background-color: #ddd;
+  color: #434b54;
+}
+
+a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+ul {
+  list-style: none;
+}
+
+.app-icon {
+  color: #377bc2;
+}
+
+.navbar {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  background-color: white;
+}
+
+.categories {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 5rem;
+}
+
+.category {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  display: flex;
+  gap: 2rem;
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.category-icon {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  width: 4rem;
+}
+
+.category-name {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  width: 12rem;
+  flex-grow: 5;
+}
+
+.category-amount {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  flex-grow: 1;
+  color: black;
+}
+
+.create-category-button {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  height: 2rem;
+  background-color: #5fb523;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.create-transaction-button {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  height: 2rem;
+  background-color: #5fb523;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.back-button {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  display: block;
+  height: 2rem;
+  background-color: #5fb523;
+  color: white;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.app-name {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  height: 2rem;
+  color: #377bc2;
+  background-color: white;
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.log-out-button {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  height: 2rem;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.total-amount {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.devise-button {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  height: 2rem;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.page-title {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: #377bc2;
+  height: 5rem;
+  align-self: center;
+  justify-self: center;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.login-splash {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  height: 4rem;
+  background-color: #377bc2;
+  color: white;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.signup-splash {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  height: 4rem;
+  background-color: white;
+  color: #434b54;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.app-name-splash {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  color: #377bc2;
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
