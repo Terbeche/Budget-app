@@ -1,3 +1,1 @@
-web: rake db:migrate
-web: bin/rails server -b 0.0.0.0 -p ${PORT:-3000}
-web: bin/rails tailwindcss:watch
+web: bundle exec rake db:migrate && bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
