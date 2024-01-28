@@ -3,7 +3,7 @@
 > This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ## Live demo
-[Live Demo Link](https://budget-app-productions.up.railway.app/)
+[Live Demo Link]([https://budget-app-productions.up.railway.app/](https://budget-web-app-fb4b85a857d6.herokuapp.com/)
 
 ## Built With
 
